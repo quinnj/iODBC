@@ -133,7 +133,6 @@ noinst_HEADERS		= \
 if DARWIN
 libiodbcinst.la: $(libiodbcinst_la_OBJECTS) $(libiodbcinst_la_DEPENDENCIES)
 	$(LINK) -rpath $(libdir) $(libiodbcinst_la_LDFLAGS) $(libiodbcinst_la_OBJECTS) $(libiodbcinst_la_LIBADD) $(LIBS) 
-	-$(STRIP) -s $(top_srcdir)/mac/iodbcinst.exp -u .libs/*.dylib
 endif
 
 EXTRA_DIST		= $(srcdir)/iodbcinst.exp

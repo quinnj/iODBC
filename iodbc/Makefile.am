@@ -94,7 +94,6 @@ noinst_HEADERS		= dlproc.h hdbc.h henv.h herr.h iodbc_misc.h \
 if DARWIN
 libiodbc.la: $(libiodbc_la_OBJECTS) $(libiodbc_la_DEPENDENCIES)
 	$(LINK) -rpath $(libdir) $(libiodbc_la_LDFLAGS) $(libiodbc_la_OBJECTS) $(libiodbc_la_LIBADD) $(LIBS)
-	-$(STRIP) -s $(top_srcdir)/mac/iodbc.exp -u .libs/*.dylib
 endif
 
 EXTRA_DIST		= \
